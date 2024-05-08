@@ -1,0 +1,186 @@
+{
+    "content": {
+        "water": {
+            "value": 0.7934,
+            "unit": "grams"
+        },
+        "energy": {
+            "value": 0.77,
+            "unit": "kilocalories"
+        },
+        "protein": {
+            "value": 0.0202,
+            "unit": "grams"
+        },
+        "fat": {
+            "value": 0.0009,
+            "unit": "grams"
+        },
+        "carbohydrate": {
+            "value": 0.1747,
+            "unit": "grams"
+        },
+        "dietary fiber": {
+            "value": 0.022,
+            "unit": "grams"
+        },
+        "sugars": {
+            "value": 0.0078,
+            "unit": "grams"
+        },
+        "calcium": {
+            "value": 0.00012,
+            "unit": "grams"
+        },
+        "iron": {
+            "value": 0.0000078,
+            "unit": "grams"
+        },
+        "magnesium": {
+            "value": 0.00023,
+            "unit": "grams"
+        },
+        "phosphorus": {
+            "value": 0.00057,
+            "unit": "grams"
+        },
+        "potassium": {
+            "value": 0.00421,
+            "unit": "grams"
+        },
+        "sodium": {
+            "value": 0.00006,
+            "unit": "grams"
+        },
+        "zinc": {
+            "value": 0.0000028,
+            "unit": "grams"
+        },
+        "vitamin c": {
+            "value": 0.000197,
+            "unit": "grams"
+        },
+        "thiamin": {
+            "value": 8.0e-7,
+            "unit": "grams"
+        },
+        "riboflavin": {
+            "value": 3.2e-7,
+            "unit": "grams"
+        },
+        "niacin": {
+            "value": 0.00001054,
+            "unit": "grams"
+        },
+        "vitamin b-6": {
+            "value": 0.00000295,
+            "unit": "grams"
+        },
+        "dietary folate": {
+            "value": 1.6e-7,
+            "unit": "grams"
+        },
+        "vitamin b-12": {
+            "value": 0,
+            "unit": "grams"
+        },
+        "vitamin a": {
+            "value": 0,
+            "unit": "grams"
+        },
+        "vitamin e": {
+            "value": 1.0e-7,
+            "unit": "grams"
+        },
+        "vitamin d2 and d3": {
+            "value": 0,
+            "unit": "grams"
+        },
+        "vitamin d": {
+            "value": 0,
+            "unit": "grams"
+        },
+        "vitamin k": {
+            "value": 1.8e-8,
+            "unit": "grams"
+        },
+        "saturated fat": {
+            "value": 0.00026,
+            "unit": "grams"
+        },
+        "monounsaturated fat": {
+            "value": 0.00002,
+            "unit": "grams"
+        },
+        "polyunsaturated fat": {
+            "value": 0.00043,
+            "unit": "grams"
+        },
+        "cholesterol": {
+            "value": 0,
+            "unit": "grams"
+        },
+        "caffeine": {
+            "value": 0,
+            "unit": "grams"
+        }
+    },
+    "cultivationCategory": "vegetable", 
+    "edibleParts": [
+        "tuber"
+    ], 
+    "germination": {
+        "duration": {
+            "max": 21, 
+            "min": 8, 
+            "unit": "days"
+        }, 
+        "rate": null
+    }, 
+    "hardinessZone": {
+        "max": 7, 
+        "min": 1
+    }, 
+    "harvest": {
+        "start":"14/6",
+        "ends":"4/10",
+        "duration": {
+            "max": 1, 
+            "min": 1, 
+            "unit": "week"
+        }
+    }, 
+    "name": "potato", 
+    "plantingSeasons":  {
+        "start":"21/3.", "ends":"20/5"
+    }, 
+    "plantings": [
+        {
+            "depth": {
+                "size": 9, 
+                "unit": "inch"
+            }, 
+            "duration": {
+                "max": 17, 
+                "min": 9, 
+                "unit": "week"
+            }, 
+            "spacing": {
+                "size": 9, 
+                "unit": "inch"
+            }
+        }
+    ], 
+    "soilImpact": "light feeder", 
+    "species": "Solanum tuberosum", 
+    "sun": {
+        "max": "full sun", 
+        "min": "full sun"
+    }, 
+    "yield": {
+        "unit": "grams per meter", 
+        "value": 3842
+    },
+    "description":"Potatoes were introduced to Europe from the Americas by the Spanish in the second half of the 16th century. Today they are a staple food in many parts of the world and an integral part of much of the world's food supply. As of 2014, potatoes were the world's fourth-largest food crop after maize (corn), wheat, and rice.[8] Following millennia of selective breeding, there are now over 5,000 different types of potatoes.[6] Over 99% of potatoes presently cultivated worldwide descend from varieties that originated in the lowlands of south-central Chile.[9] The importance of the potato as a food source and culinary ingredient varies by region and is still changing. It remains an essential crop in Europe, especially Northern and Eastern Europe, where per capita production is still the highest in the world, while the most rapid expansion in production during the 21st century was in southern and eastern Asia, with China and India leading the world production of 376 million tonnes (370,000,000 long tons; 414,000,000 short tons), as of 2021.",
+    "wiki":"https://en.wikipedia.org/wiki/Potato#Growth_and_cultivation"
+}

@@ -1,0 +1,1075 @@
+:root {
+    --white: 255, 255, 255;
+    --color1: 49, 67, 60;
+    --color2: 142, 168, 81;
+    --color3: rgb(221, 225, 213);
+    --text: 91, 87, 87;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(var(--text));
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+input,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+caption,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+h1,
+h2,
+h3.h4.h5.h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(var(--color2));
+    font-weight: 900;
+}
+
+.homeBanner {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-image: url("../../public/assets/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    height: 150px;
+    padding-top: 6.5rem;
+    padding-bottom: 8rem;
+}
+
+.homeBanner h1,
+.homeBanner h2 {
+    width: fit-content;
+    padding: 1rem 2rem 1rem 5.5rem;
+    font-style: italic;
+    user-select: none;
+}
+
+.homeBanner h1 {
+    font-size: 6vw;
+    color: rgb(var(--color2));
+    background-color: rgb(var(--color1), 0.85);
+    outline: 0.4rem solid rgb(var(--color2), 0.7);
+    border-radius: 0 3rem 3rem 0;
+    z-index: 99;
+}
+
+.homeBanner h2 {
+    font-size: 3vw;
+    color: rgb(var(--color1));
+    background: linear-gradient(45deg, rgb(var(--color2)), rgb(var(--color2), 0.6));
+    border-bottom: 0.3rem solid rgb(var(--white), 0.5);
+    border-right: 0.3rem solid rgb(var(--white), 0.5);
+    border-radius: 0 0 3rem 0;
+}
+
+
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    position: absolute;
+    min-height: 380px;
+    width: 100%;
+    background: linear-gradient(#00000000 90%, rgb(var(--color2), 0.8));
+    border-bottom: 3px rgb(var(--color2), 0.8) solid;
+}
+
+.navBar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background: none;
+    outline: none;
+    border-radius: 1rem 1rem 0 0;
+    padding: 0;
+    white-space: nowrap;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+}
+
+.navBar button svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.dropdown {
+    display: flex;
+    background-color: rgb(var(--white));
+    flex-direction: column;
+    align-items: baseline;
+    box-sizing: border-box;
+    color: rgb(var(--white));
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    z-index: 99;
+    height: 0vh !important;
+    padding: 0vw !important;
+    opacity: 0;
+}
+
+.dropdown li,
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown::-webkit-scrollbar-thumb::after,
+.overlay::-webkit-scrollbar-thumb:after {
+    position: fixed;
+    content: "";
+    height: 20px;
+    width: 20px;
+}
+
+.dropdownExpanded {
+    height: 100vh !important;
+    padding: 1rem;
+    opacity: 1;
+    padding: 10vw !important;
+}
+
+.dropdown li,
+.dropdown button {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.navBar button:hover:not(.buttonCurrentPage) {
+    color: rgb(var(--white));
+    border-bottom: 1rem solid rgb(var(--white), 0.1);
+    transform: translateY(1rem);
+}
+
+.navBar span button:first-of-type {
+    display: none;
+}
+
+@media screen and (max-width: 980px) {
+    .navBar>button p {
+        display: none
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dropdown {
+        height: 100vh;
+        width: 98vw;
+        justify-content: center;
+        gap: 2rem;
+        background-color: rgb(var(--white));
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .navBar {
+        top: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: fixed;
+        padding: 0 !important;
+        background: none;
+        box-shadow: none;
+        z-index: 999;
+    }
+
+    .navBar button {
+        background-color: rgb(var(--color1), 0.5);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .navBar button {
+        transform: translateY(-9rem);
+        padding: 0.5rem;
+    }
+
+    .navBar button:hover:not(.buttonCurrentPage) {
+        border-bottom: none;
+        transform: translateY(-9rem);
+        background-color: rgb(var(--color2), 0.5);
+    }
+
+    .navBar span button:first-of-type {
+        display: flex;
+    }
+
+    .navBar>button {
+        display: none;
+    }
+
+    .homeBanner {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .homeBanner h1,
+    .homeBanner h2 {
+        padding-left: 5vw;
+    }
+
+    .weatherWidget p {
+        display: none !important;
+    }
+}
+
+.navBar button {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media screen and (min-width: 750px) {
+    .homeBanner h1 {
+        font-size: 3rem;
+    }
+
+    .homeBanner h2 {
+        font-size: 1.5rem;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0%;
+    height: 1.5rem;
+    background: linear-gradient(rgb(var(--color2)), rgb(var(--color2)));
+    font-size: 0.8rem;
+    color: rgb(var(--color1));
+    font-size: xx-small;
+    text-indent: 0.5rem;
+}
+
+footer span {
+    display: flex;
+    align-items: center;
+}
+
+footer svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(var(--color1));
+}
+
+footer img {
+    max-width: 4rem;
+}
+
+footer button{
+    background: none;
+    outline: none;
+    color: rgb(var(--color1));
+    fill: rgb(var(--color1));
+    padding: 0.1rem 0.5rem;
+    margin: 0;
+}
+
+footer button:hover svg, footer button:hover {
+    color: rgb(var(--white));
+    fill: rgb(var(--white));
+}
+
+footer svg:hover{
+    fill: rgb(var(--white));
+}
+
+.weatherWidget {
+    text-align: right;
+    flex-wrap: nowrap;
+    color: rgb(var(--color1));
+    fill: white;
+    font-size: smaller;
+    width: min-content;
+    display: flex;
+    justify-content: right;
+    margin: 1rem;
+}
+
+.weatherWidget span {
+    width: min-content;
+    user-select: none;
+    cursor: pointer;
+}
+
+.weatherWidget * {
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.weatherWidget svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.weatherWidget>span>span:first-of-type svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.weatherWidget > div{
+    display: none;
+}
+
+:has(.expanded){
+    position: relative;
+}
+
+.weatherWidget table, .weatherWidget td, .weatherWidget th{
+    width: min-content !important;
+    padding: 0;
+    margin: 0;
+}
+
+.expanded{
+    position: absolute;
+    display: unset !important;
+    width: 500px;
+    height: 100px;
+    content: "";
+    bottom: 100%;
+    border-radius: 0.5rem;
+    background-color: rgb(var(--color2),0.9);
+    border: 0.1rem solid rgb(var(--color2));
+    z-index: 100;
+    font-size: 1rem;
+}
+
+.expanded table{
+    width: 500px;
+    background-color: red;
+    height: 100%;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+button {
+    background: rgb(var(--color1));
+    color: white;
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin: 0.7rem;
+    outline: 0.4rem solid rgba(0, 0, 0, 0.2);
+    gap: 1rem;
+}
+
+.buttonCurrentPage {
+    background: rgb(var(--white)) !important;
+    color: rgb(var(--color1));
+    border-bottom: rgb(var(--white)) 1rem solid;
+    transform: translateY(1rem);
+    position: relative;
+    outline: 0.3rem solid rgb(var(--white), 0.2) !important;
+}
+
+button:hover {
+    background: rgb(var(--white), 0.2);
+    color: rgb(var(--color1));
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.constitution {
+    width: 88%;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.constitution h1,
+.constitution h2 {
+    text-decoration: underline;
+}
+
+ol,
+ul {
+    padding: 1.5rem;
+}
+
+ol {
+    counter-reset: counter;
+    list-style: none;
+}
+
+ol>li {
+    margin: 1.5rem 0;
+}
+
+ol>li:before {
+    content: counter(counter) ".";
+    counter-increment: counter;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+ul li {
+    list-style: disc;
+    margin: 0.5rem;
+}
+
+.committeePage {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.committeePage span,
+.committeePage>div {
+    display: flex;
+    width: 100%;
+    justify-content: baseline;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.committeePage span {
+    flex-wrap: wrap;
+}
+
+.committeePage div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+}
+
+.committeePage img {
+    height: 130px;
+    width: 100px;
+    background-color: rgb(var(--color2), 0.3);
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fade {
+    opacity: 0%;
+}
+
+.imageContainer {
+    border-radius: 1rem;
+    background: rgb(var(--color2), 0.5);
+    border: 0.3rem solid rgb(var(--color2), 0.4);
+    z-index: -1;
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease-in-out;
+    margin: 0;
+    cursor: pointer;
+}
+
+.imageViewerDots {
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 90%;
+    flex-wrap: wrap
+}
+
+.imageViewerDot {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: none;
+    outline: 1px solid rgba(var(--white), 0.5);
+    cursor: pointer;
+}
+
+.currentImage {
+    background-color: rgb(var(--white));
+    outline: 2px solid rgba(var(--white));
+}
+
+.vegetablePage {
+    width: 100vw;
+    max-width: 100vw !important;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.harvestHelper {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    font-size: smaller;
+}
+
+.harvestHelper>span:first-of-type{
+    max-width: 20rem;
+    padding: 1rem;
+    background: radial-gradient(at top left, rgb(var(--color2),0.5), white);
+}
+
+.harvestHelper>span:first-of-type div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.harvestHelper span img{
+    cursor: pointer;
+}
+
+.harvestHelper span>img:first-of-type {
+    object-fit: contain;
+    object-position: left;
+    width: 100% !important;
+    max-height: 290px;
+}
+
+.harvestHelper span img:not(span > img) {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    object-position: left;
+}
+
+.harvestHelper select {
+    margin: 1rem 0;
+}
+
+.harvestHelper th{
+    user-select: none;
+}
+
+.harvestHelper td,
+.harvestHelper th {
+    min-width: 0px;
+    white-space: wrap;
+}
+
+.harvestHelper td:has(td) {
+    display: flex;
+    flex-direction: column;
+}
+
+.yearly-calendar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.yearly-calendar-container span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Yearly Calendar container */
+.yearly-calendar {
+    display: flex;
+    font-family: Arial, sans-serif;
+    width: 90vw;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.yearly-calendar h3 {
+    color: rgb(var(--white));
+    background-color: rgb(var(--color2), 0.5);
+    font-weight: 100;
+}
+
+.yearly-calendar-month {
+    border: 0.1rem solid rgb(var(--color2), 0.3);
+}
+
+.yearly-calendar-month:hover h3 {
+    color: rgb(var(--color1)) !important;
+}
+
+/* Yearly Calendar grid */
+.yearly-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: x-small;
+    margin: 0.25rem 0.25rem;
+}
+
+.yearly-calendar-dayName {
+    font-weight: 600;
+    color: rgb(var(--color2), 0.5) !important;
+}
+
+/* Day cell */
+.yearly-calendar-day,
+.yearly-calendar-dayName {
+    width: 0.2rem;
+    height: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.yearly-calendar-day:hover:not(.yearly-calendar-day.empty) {
+    color: rgb(1, 24, 0);
+    outline: rgb(var(--color2), 0.8) 0.1rem solid;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.yearly-calendar-day.inSeasonPlanting.inSeasonFirst {
+    background-color: #eed979;
+    border-radius: 50% 0 0 50%;
+}
+
+.yearly-calendar-day.inSeasonPlanting.inSeasonLast {
+    background-color: #eed979;
+    border-radius: 0 50% 50% 0;
+}
+
+.yearly-calendar-day.inSeasonHarvest.inSeasonFirst {
+    background-color: rgb(var(--color2));
+    border-radius: 50% 0 0 50%;
+}
+
+.yearly-calendar-day.inSeasonHarvest.inSeasonLast {
+    background-color: rgb(var(--color2));
+    border-radius: 0 50% 50% 0;
+}
+
+.inSeasonPlanting {
+    background-color: #eed979;
+    color: rgb(var(--color1));
+    border-radius: 0;
+}
+
+.inSeasonHarvest {
+    background-color: rgb(var(--color2));
+    color: rgb(var(--color1));
+    border-radius: 0;
+}
+
+.inSeasonHarvest:hover {
+    outline: 1px solid black !important;
+}
+
+.inSeasonPlanting:hover {
+    outline: 1px solid black !important;
+}
+
+.loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.aboutPage,
+.gamePage,
+.galleryPage,
+.linksPage,
+.contactPage,
+.homePage,
+.videoPage,
+.vegetablePage,
+.applicationPage,
+.jobsOnThePlotPage,
+.notFoundPage {
+    padding: 5vw 10vw 10vw 10vw;
+    max-width: 900px;
+    background-color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .aboutPage,
+    .gamePage,
+    .galleryPage,
+    .linksPage,
+    .contactPage,
+    .homePage,
+    .videoPage,
+    .vegetablePage,
+    .applicationPage,
+    .jobsOnThePlotPage,
+    .notFoundPage {
+        padding: 5vw 1vw 5vw 1vw;
+        max-width: 900px;
+        background-color: white;
+    }
+    footer button{
+        padding: 0rem 0.3rem;
+    }
+    footer p, footer img{
+        display: none;
+    }
+}
+
+.aboutPage img{
+    width: 100%;
+    max-width: 35rem;
+}
+
+.aboutPage nav ul{
+display: flex;
+width: 100%;
+}
+
+.aboutPage nav ul li{
+    list-style: none;
+}
+
+.galleryPage{
+    display: flex;
+    width: 90%;
+    justify-content: left;
+    padding-left: 2rem;
+    padding: 5vw 0vw 0vw 5vw;
+}
+
+.galleryPage img{
+    max-height: 20rem;
+    max-width: 10rem;
+    transform: scale(100%);
+    transition: all 0.2s ease-in-out;
+    z-index: 98;
+    cursor: pointer;
+    border-width: 0.1rem;
+    border-color: rgb(var(--color2),0.3);
+    border-style: solid;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.3rem 1.7rem 0.3rem;
+    margin: -0.6rem;
+    background-color: var(--color3);
+    outline: 99rem solid rgb(var(--color1),0.0);
+}
+
+.galleryPage img:hover:not(.expandImage){
+    scale: 125%;
+    transform: rotate(0deg) !important;
+    z-index: 99;
+}
+
+.galleryPage .expandImage{
+    animation: expandAnimation 1s ease-in-out forwards;
+}
+
+.galleryPage:has(.expandImage) img:not(.expandImage){
+    pointer-events: none;
+}
+
+@keyframes expandAnimation {
+    from {
+        z-index: 100;
+        transform: scale(100%) rotate(0deg) !important;
+        outline: 99rem solid rgb(var(--color1),0);
+    }
+    to {
+        max-height: 90vh;
+        max-width: 90vw;
+        z-index: 100;
+        scale: 150% !important;
+        rotate: 0deg !important;
+        outline: 99rem solid rgb(var(--color1),0.8);
+        pointer-events: none;
+    }
+}
+
+.galleryPage button{
+    color: rgb(var(--color1));
+    background: none;
+    outline: none;
+}
+
+.galleryPage button:hover{
+    text-decoration: underline;
+}
+
+.pagination{
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+    width: 100%;
+}
+
+.pagination button{
+    color: rgb(var(--color1));
+    background-color: rgb(var(--white), 0.3);
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.linksPage svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.linksPage ul li{
+    list-style: none;
+}
+
+.galleryPage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+}
+
+.galleryPage img {
+    max-height: 20vh;
+    max-width: 30vw;
+}
+
+.notFoundPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.notFoundPage h3 {
+    font-size: 5rem;
+    color: rgb(var(--color2), 0.4);
+    margin: 3rem;
+}
+
+.harvestHelper select,
+.harvestHelper span,
+.harvestHelper .yearly-calendar {
+    width: 100%;
+}
+
+.harvestHelper span span ul {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.harvestHelper span>img {
+    width: 200px;
+}
+
+table {
+    font-size: smaller;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+thead,
+tbody {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for table header */
+th {
+    background-color: rgb(var(--color2), 0.5);
+    border: 1px solid rgb(var(--color2), 0.5);
+    color: white;
+    padding: 8px;
+    text-align: left;
+    width: 250px !important;
+    overflow: hidden;
+}
+
+/* Style for table rows */
+tr {
+    border: 1px solid rgb(var(--color2), 0.5);
+    width: 100%;
+}
+
+/* Style for table cells */
+td {
+    background-color: none;
+    border: 1px solid rgb(var(--color2), 0.5);
+    padding: 8px;
+    text-align: left;
+    width: 250px !important;
+    overflow: hidden;
+}
+
+.applicationPage form {
+    display: flex;
+    flex-direction: column;
+}
+
+.applicationPage span,
+.applicationPage input {
+    width: 100%;
+}
+
+.applicationPage input,
+.applicationPage textarea {
+    border: 1px solid rgb(var(--color2), 0.5);
+    border-radius: 0.2rem;
+}
+
+.applicationPage span {
+    margin: 1rem 0 1rem 0
+}
+
+.contactPage iframe{
+    height: 75vh;
+    width: 100%;
+}
+
+.contactPage textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.jobsOnThePlotPage nav{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.aboutPage nav button,.jobsOnThePlotPage nav button{
+    background-color: rgb(var(--color1));
+    margin: 0.4rem;
+    padding: 0.2rem;
+    outline: 0.3rem solid rgb(var(--color1), 0.5);
+    flex: 1 0 21%;
+    opacity: 50%;
+    color: rgb(var(--white),0.7);
+}
+
+.aboutPage .activeButton, .jobsOnThePlotPage .activeButton{
+    background-color: rgb(var(--color1));
+    outline: 0.3rem solid rgb(var(--color1), 0.5);
+    color: white;
+    opacity: 100%;
+}
+
+.aboutPage nav button:hover, .jobsOnThePlotPage nav button:hover{
+    opacity: 100%;
+    background-color: rgb(var(--color1),1);
+    outline: 0.3rem solid rgb(var(--color1), 0.5);
+}
+
+.videoPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.videoPage iframe{
+    height: 25rem;
+    width: 100%;
+}

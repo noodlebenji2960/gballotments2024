@@ -1,0 +1,196 @@
+{
+    "content": {
+        "water": {
+            "value": 0.9206,
+            "unit": "grams"
+        },
+        "energy": {
+            "value": 0.23,
+            "unit": "kilocalories"
+        },
+        "protein": {
+            "value": 0.0315,
+            "unit": "grams"
+        },
+        "fat": {
+            "value": 0.0064,
+            "unit": "grams"
+        },
+        "carbohydrate": {
+            "value": 0.0265,
+            "unit": "grams"
+        },
+        "dietary fiber": {
+            "value": 0.016,
+            "unit": "grams"
+        },
+        "sugars": {
+            "value": 0.003,
+            "unit": "grams"
+        },
+        "calcium": {
+            "value": 0.00177,
+            "unit": "grams"
+        },
+        "iron": {
+            "value": 0.0000317,
+            "unit": "grams"
+        },
+        "magnesium": {
+            "value": 0.00064,
+            "unit": "grams"
+        },
+        "phosphorus": {
+            "value": 0.00056,
+            "unit": "grams"
+        },
+        "potassium": {
+            "value": 0.00295,
+            "unit": "grams"
+        },
+        "sodium": {
+            "value": 0.00004,
+            "unit": "grams"
+        },
+        "zinc": {
+            "value": 0.0000081,
+            "unit": "grams"
+        },
+        "vitamin c": {
+            "value": 0.00018,
+            "unit": "grams"
+        },
+        "thiamin": {
+            "value": 3.4e-7,
+            "unit": "grams"
+        },
+        "riboflavin": {
+            "value": 7.6e-7,
+            "unit": "grams"
+        },
+        "niacin": {
+            "value": 0.00000902,
+            "unit": "grams"
+        },
+        "vitamin b-6": {
+            "value": 0.00000155,
+            "unit": "grams"
+        },
+        "dietary folate": {
+            "value": 6.8e-7,
+            "unit": "grams"
+        },
+        "vitamin a": {
+            "value": 0.00003168,
+            "unit": "grams"
+        },
+        "vitamin e": {
+            "value": 0.000008,
+            "unit": "grams"
+        },
+        "vitamin k": {
+            "value": 0.000004148,
+            "unit": "grams"
+        },
+        "saturated fat": {
+            "value": 0.00041,
+            "unit": "grams"
+        },
+        "monounsaturated fat": {
+            "value": 0.00088,
+            "unit": "grams"
+        },
+        "polyunsaturated fat": {
+            "value": 0.00389,
+            "unit": "grams"
+        }
+    },
+    "cultivationCategory": "herb", 
+    "edibleParts": [
+        "leaf"
+    ], 
+    "germination": {
+        "duration": {
+            "max": 21, 
+            "min": 14, 
+            "unit": "days"
+        }, 
+        "rate": 0.6
+    }, 
+    "hardinessZone": {
+        "max": 11, 
+        "min": 9
+    }, 
+    "harvest": {
+        "start":"14/6",
+        "ends":"04/09",
+        "duration": {
+            "max": 12, 
+            "min": 10, 
+            "unit": "week"
+        }
+    }, 
+    "name": "basil", 
+    "plantingSeasons":  {
+        "start":"21/06", "ends":"20/07"
+    }, 
+    "plantings": [
+        {
+            "depth": {
+                "size": 0, 
+                "unit": "inch"
+            }, 
+            "duration": {
+                "max": 2, 
+                "min": 1, 
+                "unit": "week"
+            }, 
+            "spacing": {
+                "size": 1, 
+                "unit": "inch"
+            }
+        }, 
+        {
+            "depth": {
+                "size": 3, 
+                "unit": "inch"
+            }, 
+            "duration": {
+                "max": 3, 
+                "min": 3, 
+                "unit": "week"
+            }, 
+            "spacing": {
+                "size": 1.5, 
+                "unit": "inch"
+            }
+        }, 
+        {
+            "depth": {
+                "size": 3, 
+                "unit": "inch"
+            }, 
+            "duration": {
+                "max": 8, 
+                "min": 6, 
+                "unit": "week"
+            }, 
+            "spacing": {
+                "size": 6, 
+                "unit": "inch"
+            }
+        }
+    ], 
+    "soilImpact": "heavy feeder", 
+    "species": "Ocimum basilicum", 
+    "sun": {
+        "max": "full sun", 
+        "min": "part sun"
+    }, 
+    "yield": {
+        "unit": "grams per square meter", 
+        "value": 1953
+    },
+    "description":"Basil Ocimum basilicum, also called great basil, is a culinary herb of the family Lamiaceae (mints). It is a tender plant, and is used in cuisines worldwide. In Western cuisine, the generic term Basil a refers to the variety also known as sweet basil or Genovese basil. Basil is native to tropical regions from Central Africa to Southeast Asia.[5] In temperate climates basil is treated as an annual plant, however, basil can be grown as a short-lived perennial or biennial in warmer horticultural zones with tropical or Mediterranean climates. There are many varieties of basil including sweet basil, Thai basil (O. basilicum var. thyrsiflora), and Mrs. Burns' Lemon (O. basilicum var. citriodora). O. basilicum can cross-pollinate with other species of the Ocimum genus, producing hybrids such as lemon basil (O. × citriodorum) and African blue basil (O. × kilimandscharicum).",
+    "wiki":"https://en.wikipedia.org/wiki/Basil"
+}
