@@ -1,29 +1,31 @@
 {
-  "name": "gballotments",
+  "name": "gballotments2024",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
+    "deploy": "gh-pages -d build",
     "start": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noodlebenji2960/gballotments.git"
+    "url": "git+https://github.com/noodlebenji2960/gballotments2024.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/noodlebenji2960/gballotments/issues"
+    "url": "https://github.com/noodlebenji2960/gballotments2024/issues"
   },
-  "homepage": "https://github.com/noodlebenji2960/gballotments#readme",
+  "homepage": "https://github.com/noodlebenji2960/gballotments2024#readme",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
