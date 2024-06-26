@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB Allotments</title>
+    <script type="text/javascript">
+        var pathSegmentsToKeep = 0;
+
+        var l = window.location;
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/#/404'
+        );
+    </script>
+</head>
+<body>
+    <noscript>
+        <p>If you are not redirected, <a href="/#/404">click here</a>.</p>
+    </noscript>
+    <p>If you are not redirected automatically, <a href="/#/404">click here</a>.</p>
+</body>
+</html>
